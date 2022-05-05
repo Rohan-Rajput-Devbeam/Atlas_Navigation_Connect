@@ -54,9 +54,9 @@ export default class AtlasNavigationConnect extends React.Component<IAtlasNaviga
 					<>
 						{this.state.linkArray.map((subItemGroup, i) => (
 							<Col>
-								<p>
+								<a href={`https://devbeam.sharepoint.com/sites/ModernConnect/SitePages/${subItemGroup.LinkID}.aspx`}>
 									{subItemGroup.Title + '\>\>'} 
-								</p>
+								</a>
 							</Col>
 						))}
 					</>
