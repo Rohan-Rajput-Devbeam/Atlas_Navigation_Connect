@@ -7,11 +7,23 @@ export class SPService {
         sp.setup({
             spfxContext: this.context
         });
+
     }
         public async getSitePages(linkID){
             let aa = await sp.web.lists.getByTitle("Site Pages").items.filter("LinkID eq '" + linkID + "'").expand().get();
-            console.log(aa)
+            // console.log(aa)
             return aa
+        }
+
+        public async getSiteNameAndURL(){
+            var siteUrl = this.context.pageContext.web.absoluteUrl ///Get Site Url
+            // console.log(siteUrl)
+        
+            const myArray = siteUrl.split("/");
+            let siteName = myArray[myArray.length - 1].split(".")[0]; ///Get Site Name
+            // console.log(siteName)
+
+            return [siteUrl , siteName]
         }
 
     }

@@ -1,10 +1,55 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+:global(#workbenchPageContent) {
+  max-width: initial;
+}
+
+:global(.CanvasZone > div) {
+  width: 100%;
+}
 
 .atlasNavigationConnect {
+
+  font-family: "Oswald" !important;
+
   .container {
+  font-family: "Oswald" !important;
+
     max-width: 700px;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+
+    margin-left: 3.5em;
+    display: inline-block;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    border-bottom-left-radius: 0.33em;
+    border-bottom-right-radius: 0.33em;
+    background-color: #f2f2f2;
+  }
+
+  .container1{
+    margin-left: 3.5em;
+    display: inline-block;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    border-bottom-left-radius: 0.33em;
+    border-bottom-right-radius: 0.33em;
+    background-color: #f2f2f2;
+  }
+
+  .seperator{
+    background-image: url(/_catalogs/masterpage/resources/img/chevright.png);
+    height: 44px;
+    width: 16px;
+    color: transparent;
+    position: relative;
+    top: -1.25em;
+    display: inline-block;
+    margin-bottom: -1.25em;
   }
 
   .row {
