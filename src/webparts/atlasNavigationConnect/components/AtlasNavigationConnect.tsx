@@ -29,8 +29,9 @@ export default class AtlasNavigationConnect extends React.Component<IAtlasNaviga
 
 	public async componentDidMount(): Promise<void> {
 		const myArray = window.location.href.split("/");
-		let brandID = myArray[myArray.length - 1].split(".")[0];
-		console.log(brandID)
+		// let brandID = myArray[myArray.length - 1].split(".")[0];
+		let brandID = "Brand1655147765387"
+		// console.log(brandID)
 		// this.getLinkHierarchy("Rack1641385581149");
 		this.getLinkHierarchy(brandID);
 
@@ -51,11 +52,11 @@ export default class AtlasNavigationConnect extends React.Component<IAtlasNaviga
 		})
 
 		console.log(response)
-		if (response[0].ParentID && response[0].ParentID != "" && response[0].ParentID != null) {
+		if (response[0].Description && response[0].Description != "" && response[0].Description != null) {
 			// allLinks = [...allLinks, ...response[0]]
-			console.log(response[0].ParentID)
+			console.log(response[0].Description)
 			this.allLinksArr.push(response[0])
-			this.getLinkHierarchy(response[0].ParentID)
+			this.getLinkHierarchy(response[0].Description)
 		}
 		else {
 			console.log(response)
